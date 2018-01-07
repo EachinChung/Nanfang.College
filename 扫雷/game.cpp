@@ -96,24 +96,56 @@ int Calculation(int SquareX, int SquareY) {
 
 	//计算方格周围的雷数 并返回
 	if (SquareY != 0)
-		if (Square[SquareX][SquareY - 1] == 1 || Square[SquareX][SquareY - 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+		switch (Square[SquareX][SquareY - 1]) {
+		case 1:boom++; break;
+		case 4:boom++; break;
+		case 6:boom++; break;
+		}
 	if (SquareY != max_y)
-		if (Square[SquareX][SquareY + 1] == 1 || Square[SquareX][SquareY + 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+		switch (Square[SquareX][SquareY + 1]) {
+		case 1:boom++; break;
+		case 4:boom++; break;
+		case 6:boom++; break;
+		}
 
 	if (SquareX != max_x) {
-		if (Square[SquareX + 1][SquareY] == 1 || Square[SquareX + 1][SquareY] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+		switch (Square[SquareX + 1][SquareY]) {
+		case 1:boom++; break;
+		case 4:boom++; break;
+		case 6:boom++; break;
+		}
 		if (SquareY != 0)
-			if (Square[SquareX + 1][SquareY - 1] == 1 || Square[SquareX + 1][SquareY - 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+			switch (Square[SquareX + 1][SquareY - 1]) {
+			case 1:boom++; break;
+			case 4:boom++; break;
+			case 6:boom++; break;
+			}
 		if (SquareY != max_y)
-			if (Square[SquareX + 1][SquareY + 1] == 1 || Square[SquareX + 1][SquareY + 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+			switch (Square[SquareX + 1][SquareY + 1]) {
+			case 1:boom++; break;
+			case 4:boom++; break;
+			case 6:boom++; break;
+			}
 	}
 
 	if (SquareX != 0) {
-		if (Square[SquareX - 1][SquareY] == 1 || Square[SquareX - 1][SquareY] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+		switch (Square[SquareX - 1][SquareY]) {
+		case 1:boom++; break;
+		case 4:boom++; break;
+		case 6:boom++; break;
+		}
 		if (SquareY != 0)
-			if (Square[SquareX - 1][SquareY - 1] == 1 || Square[SquareX - 1][SquareY - 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+			switch (Square[SquareX - 1][SquareY - 1]) {
+			case 1:boom++; break;
+			case 4:boom++; break;
+			case 6:boom++; break;
+			}
 		if (SquareY != max_y)
-			if (Square[SquareX - 1][SquareY + 1] == 1 || Square[SquareX - 1][SquareY + 1] == 4 || Square[SquareX][SquareY - 1] == 6) boom++;
+			switch (Square[SquareX - 1][SquareY + 1]) {
+			case 1:boom++; break;
+			case 4:boom++; break;
+			case 6:boom++; break;
+			}
 	}
 
 	return boom;
