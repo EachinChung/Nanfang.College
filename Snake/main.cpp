@@ -11,9 +11,6 @@
 #define Space 32
 #define Turn 224
 
-int len;
-int foodX, foodY;
-int map[25][25];
 void Init();//初始化
 void Boundary();//为蛇画一个边界
 void Snake();//打印蛇
@@ -21,6 +18,7 @@ void Food();//随机食物
 void Move(int direction);//移动蛇
 void Game();//游戏函数
 bool GameOver();//游戏结束
+int len, foodX, foodY, map[25][25];
 
 int main() {
 	initgraph(420, 420);
@@ -34,10 +32,7 @@ void Init() {
 	for (int y = 0; y < 25; y++)
 		for (int x = 0; x < 25; x++)
 			map[x][y] = 0;
-	len = 3;
-	map[0][0] = 3;
-	map[1][0] = 2;
-	map[2][0] = 1;
+	len = 3, map[0][0] = 3, map[1][0] = 2, map[2][0] = 1;
 	Snake();
 }
 
