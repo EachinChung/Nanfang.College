@@ -52,12 +52,11 @@ void Boundary() {
 void Snake() {
 	int x1, y1, x2, y2;
 	for (int y = 0; y < 20; y++)
-		for (int x = 0; x < 20; x++) {
+		for (int x = 0; x < 20; x++)
 			if (map[x][y] != 0) {
 				setfillcolor(BLACK);
 				solidrectangle(10 + x * 20, 10 + y * 20, 10 + x * 20 + 19, 10 + y * 20 + 19);
 			}
-		}
 }
 
 void Food() {
