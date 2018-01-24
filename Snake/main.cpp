@@ -45,7 +45,6 @@ void Boundary() {
 }
 
 void Snake() {
-	int x1, y1, x2, y2;
 	for (int y = 0; y < 20; y++)
 		for (int x = 0; x < 20; x++)
 			if (map[x][y] != 0) {
